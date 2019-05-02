@@ -16,6 +16,7 @@ const char ICONS[4]        = {'v','>','^','<'};
 const char GHOST_ICON      = 'M';
 
 // цвета
+const int GREEN     = FOREGROUND_GREEN;
 const int WHITE     = FOREGROUND_RED   | FOREGROUND_GREEN | FOREGROUND_BLUE | FOREGROUND_INTENSITY;
 const int RED       = FOREGROUND_RED   | FOREGROUND_INTENSITY;
 const int BLUE      = FOREGROUND_BLUE  | FOREGROUND_INTENSITY;

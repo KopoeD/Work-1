@@ -24,11 +24,14 @@ public:
     void Go();
 	int state = 0;
 	int difficulty = 14;
+	int DiffFirst;
 	int xc=9;
+	int levelNum;
 
     void LoadLevel();
 	void NextLevel();
     void PrintReady();
+	void PrintLevel();
     void GameOver();
 	void PrintYouWon();
 	void ClearAll();

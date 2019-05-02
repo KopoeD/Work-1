@@ -123,10 +123,10 @@ void Pacman::PrintScore(int scoreInc) {
     }
     if (score > hiScore) {
         hiScore = score;
-        cout << setw(11) << hiScore;
+        cout << setw(15) << hiScore;
     }
 	else {
-		cout << setw(11) << hiScore;
+		cout << setw(15) << hiScore;
 	}
 }
 

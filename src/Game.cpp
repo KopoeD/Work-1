@@ -55,7 +55,10 @@ void Game::MainLoop() {
     player->SetScore(0);
     player->SetLives(3);
     bool gameOver = false;
-	for (int levelNum = 1; levelNum <= 3; ++levelNum) {
+	for (levelNum = 1; levelNum <= 3; ++levelNum) {
+		if (levelNum == 1) {
+			DiffFirst = difficulty;
+		}
 		LoadLevel();
 		// пока есть точки
 		while (player->GetLeft() != 0) {
@@ -202,6 +205,7 @@ void Game::LoadLevel() {
     InitAll();
     ShowAll();
     player->PrintLives();
+	PrintLevel();
     PrintReady();
 }
 
@@ -248,6 +252,22 @@ void Game::PrintReady() {
     Sleep(2000);
     SetCursorPosition(17, 11);
     cout << "      ";
+}
+
+void Game::PrintLevel() {
+	SetCursorPosition(30, 11);
+		if (DiffFirst == 14) {
+			SetTextColor(GREEN);
+			cout << "Easy";
+		}
+		if (DiffFirst == 13) {
+			SetTextColor(YELLOW);
+			cout << "Medium";
+		}
+		if (DiffFirst == 12) {
+			SetTextColor(RED);
+			cout << "Hard";
+		}
 }
 
 void Game::GameOver() {
